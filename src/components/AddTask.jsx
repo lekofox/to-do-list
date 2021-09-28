@@ -18,6 +18,11 @@ const AddTask = ({ handleTaskAddition }) => {
         className="add-task-input"
         value={inputData}
         onChange={handleInputChange}
+        onKeyDown={(e) => {
+          if (e.keyCode === 13) {
+            handleAddTaskClick();
+          }
+        }}
       />
 
       <div className="add-task-button-container">
